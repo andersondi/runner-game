@@ -1,0 +1,87 @@
+body {
+  background: #fafafa;
+}
+
+.hero {
+  width: 40px;
+  height: 47px;
+  position: absolute;
+  border: 3px 2px;
+  bottom: 47px;
+}
+
+.enemy {
+  position: absolute;
+  width: 34.78px;
+  height: 47px;
+  bottom: 47px;
+}
+
+.zombie {
+  background: transparent url(/images/zombie.gif) 0px -4px no-repeat;
+}
+
+.zombie--rise {
+  animation: zombie--rise 1.8s steps(9);
+}
+
+.zombie--walk {
+  animation: zombie--walk 1s steps(2) infinite;
+}
+
+.walk {
+  background: transparent url(/images/richter.png) 0px 0px no-repeat;
+  animation: walk 1s steps(8) infinite;
+}
+
+.jump {
+  background: transparent url(/images/richter.png) 0px -102px no-repeat;
+  animation: jump 4s steps(8) infinite;
+}
+
+.game-over {
+  text-align: center;
+  color: #666;
+  margin: 50px 0;
+  font-family: arial;
+}
+
+@keyframes walk {
+  from {background-position-x: 0px;}
+  to {background-position-x: -408px}
+}
+
+@keyframes jump {
+  from {background-position-x: 0px;}
+  to {background-position-x: -408px}
+}
+
+@keyframes zombie--rise {
+  from {background-position-x: 0px;}
+  to {background-position-x: -313px}
+}
+
+@keyframes zombie--walk {
+  from {background-position-x: -243px;}
+  to {background-position-x: -313px}
+}
+
+@keyframes slideright {
+  from {
+      background-position: 70000%;
+  }
+  to {
+      background-position: 0%;
+  }
+}
+
+.background {
+  position: absolute;
+  bottom: 100px;
+  background-image: url('./images/background.png');
+  background-repeat: repeat-x;
+  animation: slideright 6000s infinite linear;
+  -webkit-animation: slideright 6000s infinite linear;
+  width: 100%;
+  height: 258px;
+}
